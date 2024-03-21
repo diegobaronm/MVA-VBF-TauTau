@@ -1,0 +1,9 @@
+# Ignore output files
+*.root
+*.pdf
+*.png
+# Ignore non-code-relevant folders
+.vscode/*
+.DS_Store
+.tmp.driveupload/*
+dataset/plots/*
