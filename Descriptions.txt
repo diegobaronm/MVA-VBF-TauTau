@@ -1,0 +1,2 @@
+# Version used in the PhD thesis and up to ANA v0.3
+validateBDT_Test_BDT-HM-10Folds.weights.xml
