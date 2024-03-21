@@ -1,6 +1,9 @@
+// This script calculates the KS test for the signal and background distributions for multiple MVAs and folds.
+
 std::vector<std::string> methodNames = {"BDT-HM-10Folds"}; //,"BDT2Levels+Gini","BDT3Levels","BDTMoreTrees", "BDTEvenMoreTrees"};
 int numberOfFolds = 10;
 
+// Calculate the mean and standard deviation of a vector of doubles.
 void AverageAndStdDeviation(const std::vector<double>& data, double& average, double& stdDeviation) {
   average = 0;
   stdDeviation = 0;
@@ -15,6 +18,7 @@ void AverageAndStdDeviation(const std::vector<double>& data, double& average, do
   stdDeviation = sqrt(stdDeviation);
 }
 
+// Main function to calculate the KS test results.
 void CalculateKSTestFunction(const int nFolds,const std::vector<std::string>& methodNames){
 
     // Loop over all methods

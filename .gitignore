@@ -7,3 +7,4 @@
 .DS_Store
 .tmp.driveupload/*
 dataset/plots/*
+.ROOT.cachefile
