@@ -25,7 +25,7 @@ void TrainFactory(UInt_t jobs = 1)
 
    // Open the file with the input data
    TFile* input{nullptr};
-   TString fname = "/Users/user/Documents/HEP/VBF-Analysis/VBFAnalysisPlots/TauTau/TauhadTaulep/High-Mass/TrainingBDTSamples/TrainingData.root";
+   TString fname = "/Users/user/Documents/HEP/VBF-Analysis/VBFAnalysisPlots/BDTTraining/5Folds/Training.root";
    if (!gSystem->AccessPathName(fname)) {
       input = TFile::Open(fname); // check if file in local directory exists
    } else {
@@ -71,23 +71,23 @@ void TrainFactory(UInt_t jobs = 1)
    dataloader->SetBackgroundWeightExpression("mcWeight");
    
    // Specify the number of events used for training, the rest will be used for evaluation
-   TCut preCut = "reco_mass>135 && mcWeight < 1"; // SplitSeed=70 // nTrain_Signal=11750:nTrain_Background=25690
-   dataloader->PrepareTrainingAndTestTree(preCut,preCut, "nTrain_Signal=11750:nTrain_Background=25710:nTest_Signal=0:nTest_Background=0:SplitMode=Random:SplitSeed=70:NormMode=EqualNumEvents:V");
+   TCut preCut = "reco_mass>135 && mcWeight < 5.0 && mcWeight > -5.0"; // SplitSeed=70 // nTrain_Signal=14500:nTrain_Background=20934
+   dataloader->PrepareTrainingAndTestTree(preCut,preCut, "nTrain_Signal=17836:nTrain_Background=25319:nTest_Signal=0:nTest_Background=0:SplitMode=Random:SplitSeed=70:NormMode=EqualNumEvents:V");
 
    // Define the number of folds and the splitting expression.
-   int NumFolds = 10;
-   TString splitExpr = ":SplitType=Deterministic:SplitExpr=int([eventNumber])\%int(10)";
+   int NumFolds = 5;
+   TString splitExpr = ":SplitType=Deterministic:SplitExpr=int([eventNumber])\%int(5)";
 
    // Open output file
    TFile *outputFile = TFile::Open("TrainResults.root", "RECREATE");
    (TMVA::gConfig().GetVariablePlotting()).fNbinsMVAoutput=10;
 
    // Initialise the cross-validation object to train and evaluate the MVAs
-   TString opt = "!V:!Silent:!Correlations:AnalysisType=Classification:NumFolds=10:FoldFileOutput=True"+splitExpr;
-   TMVA::CrossValidation cv {"10Folds", dataloader, outputFile, opt};
+   TString opt = "!V:!Silent:!Correlations:AnalysisType=Classification:NumFolds=5:FoldFileOutput=True"+splitExpr;
+   TMVA::CrossValidation cv {"5Folds", dataloader, outputFile, opt};
 
    // Book your MVA 
-   cv.BookMethod(TMVA::Types::kBDT, "BDT-0.3", "!H:!V:NTrees=125:MinNodeSize=3%:BoostType=Grad:Shrinkage=0.10:UseBaggedBoost=True:BaggedSampleFraction=0.5:UseNvars=2:nCuts=80:MaxDepth=2:SeparationType=SDivSqrtSPlusB");
+   cv.BookMethod(TMVA::Types::kBDT, "BDT_NewCuts_NewQCD_NoRegSplits", "!H:!V:NTrees=125:MinNodeSize=3%:BoostType=Grad:Shrinkage=0.10:UseBaggedBoost=True:BaggedSampleFraction=0.5:UseNvars=2:nCuts=80:MaxDepth=2:SeparationType=SDivSqrtSPlusB");
    
    // Train and evaluate the MVA
    cv.Evaluate();

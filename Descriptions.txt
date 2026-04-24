@@ -2,3 +2,166 @@
 validateBDT_Test_BDT-HM-10Folds.weights.xml
 # Same as last but with the new naming conventions
 10Folds_BDT-0.3_fold1.weights.xml
+
+
+# These are the new versions tested after ANA v0.9.1
+
+************************************ BDT_NewCuts_AllQCD ************************************
+: ---------------------------------------------
+: Rank : Variable             : Separation
+: ---------------------------------------------
+:    1 : pT_{balance}         : 1.363e-01
+:    2 : m_{T}(l)/f(m_{reco}) : 1.113e-01
+:    3 : #Omega               : 9.083e-02
+:    4 : #Delta y_{jj}        : 7.909e-02
+:    5 : m_{jj}               : 7.481e-02
+:    6 : #xi(Z)               : 6.483e-02
+: ---------------------------------------------
+Summary for method BDT_NewCuts_AllQCD
+	Fold 0: ROC int: 0.828728, SignalEff @ BkgEff=0.1: 0.56, Separation: 0.331564
+	Fold 1: ROC int: 0.761175, SignalEff @ BkgEff=0.1: 0.475, Separation: 0.238079
+	Fold 2: ROC int: 0.811519, SignalEff @ BkgEff=0.1: 0.494, Separation: 0.311607
+	Fold 3: ROC int: 0.76036, SignalEff @ BkgEff=0.1: 0.259, Separation: 0.248017
+	Fold 4: ROC int: 0.850107, SignalEff @ BkgEff=0.1: 0.591, Separation: 0.376451
+	Fold 5: ROC int: 0.770249, SignalEff @ BkgEff=0.1: 0.333, Separation: 0.259351
+	Fold 6: ROC int: 0.801294, SignalEff @ BkgEff=0.1: 0.406, Separation: 0.276628
+	Fold 7: ROC int: 0.773554, SignalEff @ BkgEff=0.1: 0.489, Separation: 0.246192
+	Fold 8: ROC int: 0.811918, SignalEff @ BkgEff=0.1: 0.438, Separation: 0.304467
+	Fold 9: ROC int: 0.772079, SignalEff @ BkgEff=0.1: 0.371, Separation: 0.230117
+SUMMARY: 
+ROC Integral: 0.794098 +- 0.0311036
+Separation: 0.282247 +- 0.0475606
+
+KS Fold 1 ------ BG :0.904 Signal: 0.231
+KS Fold 2 ------ BG :0.006 Signal: 0.734
+KS Fold 3 ------ BG :0.798 Signal: 0.23
+KS Fold 4 ------ BG :0.238 Signal: 0.887
+KS Fold 5 ------ BG :0.524 Signal: 0.528
+KS Fold 6 ------ BG :0.027 Signal: 0.904
+KS Fold 7 ------ BG :0.019 Signal: 0.79
+KS Fold 8 ------ BG :0.116 Signal: 0.308
+KS Fold 9 ------ BG :0.23 Signal: 0.14
+KS Fold 10 ------ BG :0.028 Signal: 0.494
+Average KS Signal: 0.5246 +/- 0.290275
+Average KS Background: 0.289 +/- 0.336369
+
+ ************************************ BDT_NewCuts_NewQCD ************************************
+: ---------------------------------------------
+: Rank : Variable             : Separation
+: ---------------------------------------------
+:    1 : pT_{balance}         : 1.673e-01
+:    2 : m_{T}(l)/f(m_{reco}) : 1.266e-01
+:    3 : #Omega               : 1.112e-01
+:    4 : #Delta y_{jj}        : 7.966e-02
+:    5 : m_{jj}               : 7.064e-02
+:    6 : #xi(Z)               : 5.487e-02
+: ---------------------------------------------
+Summary for method BDT_NewCuts_NewQCD
+        Fold 0: ROC int: 0.852755, SignalEff @ BkgEff=0.1: 0.593, Separation: 0.368213
+        Fold 1: ROC int: 0.795759, SignalEff @ BkgEff=0.1: 0.345, Separation: 0.294982
+        Fold 2: ROC int: 0.818818, SignalEff @ BkgEff=0.1: 0.527, Separation: 0.319492
+        Fold 3: ROC int: 0.715734, SignalEff @ BkgEff=0.1: 0.246, Separation: 0.18493
+        Fold 4: ROC int: 0.858266, SignalEff @ BkgEff=0.1: 0.6, Separation: 0.393385
+        Fold 5: ROC int: 0.785091, SignalEff @ BkgEff=0.1: 0.363, Separation: 0.278501
+        Fold 6: ROC int: 0.81042, SignalEff @ BkgEff=0.1: 0.475, Separation: 0.282708
+        Fold 7: ROC int: 0.741014, SignalEff @ BkgEff=0.1: 0.329, Separation: 0.18747
+        Fold 8: ROC int: 0.818074, SignalEff @ BkgEff=0.1: 0.484, Separation: 0.309859
+        Fold 9: ROC int: 0.747882, SignalEff @ BkgEff=0.1: 0.44, Separation: 0.222315
+SUMMARY: 
+ROC Integral: 0.794381 +- 0.0473619
+Separation: 0.284186 +- 0.0699806
+
+KS Fold 1 ------ BG :0.373 Signal: 0.394
+KS Fold 2 ------ BG :0.079 Signal: 0.618
+KS Fold 3 ------ BG :0.377 Signal: 0.274
+KS Fold 4 ------ BG :0.019 Signal: 0.694
+KS Fold 5 ------ BG :0.464 Signal: 0.715
+KS Fold 6 ------ BG :0.133 Signal: 0.084
+KS Fold 7 ------ BG :0.027 Signal: 0.648
+KS Fold 8 ------ BG :0.041 Signal: 0.164
+KS Fold 9 ------ BG :0.034 Signal: 0.846
+KS Fold 10 ------ BG :0 Signal: 0.434
+Average KS Signal: 0.4871 +/- 0.256116
+Average KS Background: 0.1547 +/- 0.177979
+
+ ************************************ BDT_NewCuts_NewQCD_NoSampleSplitting ************************************
+
+: ---------------------------------------------
+: Rank : Variable             : Separation
+: ---------------------------------------------
+:    1 : pT_{balance}         : 1.863e-01
+:    2 : m_{T}(l)/f(m_{reco}) : 1.486e-01
+:    3 : #Omega               : 1.295e-01
+:    4 : #Delta y_{jj}        : 6.158e-02
+:    5 : m_{jj}               : 5.834e-02
+:    6 : #xi(Z)               : 3.871e-02
+: ---------------------------------------------
+
+Summary for method BDT_NewCuts_NewQCD_NoRegSplits
+        Fold 0: ROC int: 0.861981, SignalEff @ BkgEff=0.1: 0.6, Separation: 0.387899
+        Fold 1: ROC int: 0.793358, SignalEff @ BkgEff=0.1: 0.442, Separation: 0.275778
+        Fold 2: ROC int: 0.840833, SignalEff @ BkgEff=0.1: 0.518, Separation: 0.351992
+        Fold 3: ROC int: 0.741192, SignalEff @ BkgEff=0.1: 0.241, Separation: 0.188985
+        Fold 4: ROC int: 0.86027, SignalEff @ BkgEff=0.1: 0.59, Separation: 0.386051
+        Fold 5: ROC int: 0.817047, SignalEff @ BkgEff=0.1: 0.398, Separation: 0.357995
+        Fold 6: ROC int: 0.819549, SignalEff @ BkgEff=0.1: 0.458, Separation: 0.309336
+        Fold 7: ROC int: 0.771526, SignalEff @ BkgEff=0.1: 0.395, Separation: 0.234374
+        Fold 8: ROC int: 0.84245, SignalEff @ BkgEff=0.1: 0.555, Separation: 0.35768
+        Fold 9: ROC int: 0.766615, SignalEff @ BkgEff=0.1: 0.42, Separation: 0.247845
+SUMMARY: 
+ROC Integral: 0.811482 +- 0.0418006
+Separation: 0.309793 +- 0.0695945
+
+Processing CalculateKSTest.cpp...
+SUMMARYBDT_NewCuts_NewQCD_NoRegSplits
+KS Fold 1 ------ BG :0.551 Signal: 0.729
+KS Fold 2 ------ BG :0.003 Signal: 0.575
+KS Fold 3 ------ BG :0.952 Signal: 0.195
+KS Fold 4 ------ BG :0.105 Signal: 0.205
+KS Fold 5 ------ BG :0.254 Signal: 0.823
+KS Fold 6 ------ BG :0.417 Signal: 0.532
+KS Fold 7 ------ BG :0.004 Signal: 0.353
+KS Fold 8 ------ BG :0.005 Signal: 0.572
+KS Fold 9 ------ BG :0.8 Signal: 0.76
+KS Fold 10 ------ BG :0 Signal: 0.558
+Average KS Signal: 0.5302 +/- 0.219116
+Average KS Background: 0.3091 +/- 0.35652
+
+# These is the current candidate to be final. BDT_NewCuts_NewQCD_NoSampleSplitting
+
+ ************************************ BDT_NewCuts_NewQCD_NoSampleSplitting - 5 Folds ************************************
+: ---------------------------------------------
+: Rank : Variable             : Separation
+: ---------------------------------------------
+:    1 : pT_{balance}         : 1.871e-01
+:    2 : m_{T}(l)/f(m_{reco}) : 1.469e-01
+:    3 : #Omega               : 1.281e-01
+:    4 : #Delta y_{jj}        : 6.090e-02
+:    5 : m_{jj}               : 5.782e-02
+:    6 : #xi(Z)               : 3.829e-02
+: ---------------------------------------------
+
+Summary for method BDT_NewCuts_NewQCD_NoRegSplits
+Fold 0: ROC int: 0.854075, SignalEff @ BkgEff=0.1: 0.579, Separation: 0.381887
+Fold 1: ROC int: 0.824606, SignalEff @ BkgEff=0.1: 0.47, Separation: 0.316096
+Fold 2: ROC int: 0.833324, SignalEff @ BkgEff=0.1: 0.53, Separation: 0.336689
+Fold 3: ROC int: 0.845478, SignalEff @ BkgEff=0.1: 0.539, Separation: 0.364443
+Fold 4: ROC int: 0.846845, SignalEff @ BkgEff=0.1: 0.543, Separation: 0.378036
+
+SUMMARY: 
+ROC Integral: 0.840866 +- 0.0117557
+Separation: 0.35543 +- 0.0282429
+
+SUMMARYBDT_NewCuts_NewQCD_NoRegSplits
+Chi2 Fold 1 ------ BG :1.15487 Signal: 0.451982
+Chi2 Fold 2 ------ BG :1.95715 Signal: 0.856106
+Chi2 Fold 3 ------ BG :0.883834 Signal: 0.754957
+Chi2 Fold 4 ------ BG :0.986327 Signal: 1.02579
+Chi2 Fold 5 ------ BG :1.38895 Signal: 0.523754
+
+Average Chi2 Signal: 0.722518 +/- 0.236415
+Average Chi2 Background: 1.27423 +/- 0.426931
+Combined Chi2 Signal: 0.616716
+Combined Chi2 Background: 1.94704
+Average KS Signal: 0.4222 +/- 0.269767
+Average KS Background: 0.35156 +/- 0.269515
